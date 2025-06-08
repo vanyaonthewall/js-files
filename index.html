@@ -27,15 +27,6 @@
 
     </style>
 
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1">
-    <meta itemprop="name" content="my-face">
-    <meta itemprop="description" content="made with cables">
-    <meta itemprop="image" content="screenshot.png">
-    <meta name="description" content="made with cables"/>
-
-</head>
-<body>
     <canvas id="glcanvas" width="100vw" height="100vh" tabindex="1"></canvas>
 
     
@@ -66,7 +57,7 @@
                 "prefixAssetPath": "",
                 "assetPath": "assets/",
                 "jsPath": "js/",
-                "glCanvasId": "glcanvas",
+                "glCanvasId": "body",
                 "glCanvasResizeToWindow": true,
                 "onError": showError,
                 "onPatchLoaded": patchInitialized,
@@ -76,8 +67,7 @@
         });
 
         // disable rubberband effect on mobile devices
-        document.getElementById('glcanvas').addEventListener('touchmove', (e)=>{ e.preventDefault(); }, false);
+        document.getElementById('body').addEventListener('touchmove', (e)=>{ e.preventDefault(); }, false);
     </script>
-</body>
         
 </iframe>
