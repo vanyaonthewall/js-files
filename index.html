@@ -1,19 +1,5 @@
 <iframe>
 <style>
-        body {
-            margin: 0;
-            background-color: #000;
-            color: #fff;
-            font-family: Helvetica, Arial, sans-serif;
-            overflow: hidden; /* disable scrolling / rubberband effect on mobile */
-            height:100vh;
-        }
-
-        canvas {
-            display: block;
-            position: absolute;
-            outline:0;
-        }
 
         * {
             /* disable on touch highlights of html elements, especially on mobile! */
@@ -27,7 +13,7 @@
 
     </style>
 
-    <canvas id="glcanvas" width="100vw" height="100vh" tabindex="1"></canvas>
+    <canvas id="html" width="100vw" height="100vh" tabindex="1"></canvas>
 
     
     <script type="text/javascript" src="js/patch.js" async></script>
@@ -57,7 +43,7 @@
                 "prefixAssetPath": "",
                 "assetPath": "assets/",
                 "jsPath": "js/",
-                "glCanvasId": "body",
+                "glCanvasId": "html",
                 "glCanvasResizeToWindow": true,
                 "onError": showError,
                 "onPatchLoaded": patchInitialized,
@@ -67,7 +53,7 @@
         });
 
         // disable rubberband effect on mobile devices
-        document.getElementById('body').addEventListener('touchmove', (e)=>{ e.preventDefault(); }, false);
+        document.getElementById('html').addEventListener('touchmove', (e)=>{ e.preventDefault(); }, false);
     </script>
         
 </iframe>
