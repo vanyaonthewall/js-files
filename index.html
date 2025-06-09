@@ -1,19 +1,4 @@
-<iframe>
-<style>
-
-        * {
-            /* disable on touch highlights of html elements, especially on mobile! */
-            -webkit-tap-highlight-color: transparent;
-            -webkit-touch-callout: none;
-            -webkit-user-select: none;
-            -moz-user-select: none;
-            -ms-user-select: none;
-            user-select: none;
-        }
-
-    </style>
-
-    <canvas id="html" width="100vw" height="100vh" tabindex="1"></canvas>
+ <canvas id="html" width="100vw" height="100vh" tabindex="1"></canvas>
 
     
     <script type="text/javascript" src="js/patch.js" async></script>
@@ -55,5 +40,3 @@
         // disable rubberband effect on mobile devices
         document.getElementById('html').addEventListener('touchmove', (e)=>{ e.preventDefault(); }, false);
     </script>
-        
-</iframe>
