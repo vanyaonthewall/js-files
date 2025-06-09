@@ -1,4 +1,45 @@
- <canvas id="html" width="100vw" height="100vh" tabindex="1"></canvas>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>my-face</title>
+    <style>
+        body {
+            margin: 0;
+            background-color: #000;
+            color: #fff;
+            font-family: Helvetica, Arial, sans-serif;
+            overflow: hidden; /* disable scrolling / rubberband effect on mobile */
+            height:100vh;
+        }
+
+        canvas {
+            display: block;
+            position: absolute;
+            outline:0;
+        }
+
+        * {
+            /* disable on touch highlights of html elements, especially on mobile! */
+            -webkit-tap-highlight-color: transparent;
+            -webkit-touch-callout: none;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+
+    </style>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1">
+    <meta itemprop="name" content="my-face">
+    <meta itemprop="description" content="made with cables">
+    <meta itemprop="image" content="screenshot.png">
+    <meta name="description" content="made with cables"/>
+
+</head>
+<body>
+    <canvas id="glcanvas" width="100vw" height="100vh" tabindex="1"></canvas>
 
     
     <script type="text/javascript" src="js/patch.js" async></script>
@@ -28,7 +69,7 @@
                 "prefixAssetPath": "",
                 "assetPath": "assets/",
                 "jsPath": "js/",
-                "glCanvasId": "html",
+                "glCanvasId": "glcanvas",
                 "glCanvasResizeToWindow": true,
                 "onError": showError,
                 "onPatchLoaded": patchInitialized,
@@ -38,5 +79,7 @@
         });
 
         // disable rubberband effect on mobile devices
-        document.getElementById('html').addEventListener('touchmove', (e)=>{ e.preventDefault(); }, false);
+        document.getElementById('glcanvas').addEventListener('touchmove', (e)=>{ e.preventDefault(); }, false);
     </script>
+</body>
+</html>
